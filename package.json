@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -42,7 +43,6 @@
   },
   "description": "Social media app created with react using typescript and firebase",
   "main": "index.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "Matias Emmanuel Demarchi",
   "license": "ISC"
