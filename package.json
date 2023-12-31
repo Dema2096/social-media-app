@@ -39,5 +39,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Social media app created with react using typescript and firebase",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Matias Emmanuel Demarchi",
+  "license": "ISC"
 }
