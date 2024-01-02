@@ -48,6 +48,11 @@ body {
   border-radius: 50%;
 }
 
+.user button{
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
 
 
 
