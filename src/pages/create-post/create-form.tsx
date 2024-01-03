@@ -5,10 +5,13 @@ import {addDoc, collection} from "firebase/firestore"
 import { db } from "../../config/firebase"
 import { auth } from "../../config/firebase"
 import {useAuthState} from "react-firebase-hooks/auth"
+import { useNavigate } from "react-router-dom"
 
 const CreateForm = () =>{
 
     const [user] = useAuthState(auth)
+
+    const navigate = useNavigate()
 
     interface CreateFormData {
         title : string,
@@ -36,6 +39,7 @@ const CreateForm = () =>{
             username: user?.displayName,
             userId: user?.uid
         })
+        navigate("/")
     }
 
 
@@ -45,7 +49,7 @@ return(
         <p style={{color: "red"}}>{errors.title?.message}</p>
         <textarea placeholder="Description..."{...register("description")}/>
         <p style={{color: "red"}}>{errors.description?.message}</p>
-        <input type="submit"/>
+        <input type="submit" className="submitForm"/>
     </form>
 )
 }
