@@ -14,13 +14,11 @@ const CreateForm = () =>{
     const navigate = useNavigate()
 
     interface CreateFormData {
-        title : string,
-        description : string
+        post : string
     }
 
     const schema = yup.object().shape({
-        title: yup.string().required("You must add a title"),
-        description: yup.string().required("The description can't be empty")
+        post: yup.string().required("The post can't be empty")
     })
 
     const {
@@ -45,10 +43,8 @@ const CreateForm = () =>{
 
 return(
     <form onSubmit={handleSubmit(onCreatePost)}>
-        <input placeholder="Title..." {...register("title")}/>
-        <p style={{color: "red"}}>{errors.title?.message}</p>
-        <textarea placeholder="Description..."{...register("description")}/>
-        <p style={{color: "red"}}>{errors.description?.message}</p>
+        <textarea placeholder="Type here..."{...register("post")}/>
+        <p style={{color: "red"}}>{errors.post?.message}</p>
         <input type="submit" className="submitForm"/>
     </form>
 )
