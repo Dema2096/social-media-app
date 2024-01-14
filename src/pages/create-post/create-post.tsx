@@ -3,7 +3,7 @@ import CreateForm from "./create-form"
 
 const CreatePost = () =>{
     return(
-        <div className="create-post">
+        <div className="w-full h-auto flex justify-center">
             <CreateForm/>
         </div>
     )

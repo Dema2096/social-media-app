@@ -10,7 +10,7 @@ import CreatePost from './pages/create-post/create-post';
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-center bg-cover bg-fixed h-max min-h-[100vh]" style={{backgroundImage: `url(${require("./background/abstract-digital-grid-black-background.jpg")})`}}>
       <Router>
         <Navbar/>
         <Routes>

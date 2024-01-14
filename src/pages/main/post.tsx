@@ -68,15 +68,20 @@ const Post = (props : Props) =>{
     }, [])
 
     return(
-        <div>
-             <div className="username">
-                <p>@{post.username}</p>
+        <div className="flex justify-center">
+            <div className="bg-cyan-800 rounded-xl m-5 w-[500px] max-h-[1000px] font-mono p-3">
+                <div className="flex mb-2">
+                    <img className="rounded-xl w-12 h-12" src={user?.photoURL || ""}/>
+                    <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
+                </div>
+                <div className="bg-cyan-900 p-3 rounded-xl text-xl">
+                    <p>{post.post}</p>
+                </div>
+                <div className="flex justify-between">
+                    <button className="text-xl m-3 py-1 px-2 bg-amber-600 rounded-lg" onClick={hasUserLiked ? removeLike :addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</> }</button>
+                    {likes && <p className="text-lg m-3 p-2 bg-amber-600 rounded-lg">Likes: {likes?.length}</p>}
+                </div>
             </div>
-            <div className="body">
-                <p>{post.post}</p>
-            </div>
-            <button onClick={hasUserLiked ? removeLike :addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</> }</button>
-            {likes && <p>Likes: {likes?.length}</p>}
         </div>
     )
 }

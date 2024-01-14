@@ -37,10 +37,12 @@ const Main = () =>{
         {user? (<div>{postsList?.map((post)=>(
             <Post post={post}/>
         ))}</div>) : 
-            (<div>
-                <h1>You need to Sign in to see the posts!</h1>
-                <Link to="/login">Click here</Link>
-            </div>)
+            (<div className="flex justify-center"> 
+                <div className="m-3 bg-cyan-800 p-3 rounded-xl w-96 pb-8">
+                    <h1 className="text-xl mt-3 mb-5 bg-cyan-900 rounded-xl py-3">You need to Sign in to see the posts!</h1>
+                    <Link className="bg-amber-600 py-2 px-3 rounded-lg text-lg text-white cursor-pointer mb-5" to="/login">Click here</Link>
+                </div>
+            </div> )
         }
         </div>
     )
