@@ -71,7 +71,7 @@ const Post = (props : Props) =>{
         <div className="flex justify-center">
             <div className="bg-cyan-800 rounded-xl m-5 w-[500px] max-h-[1000px] font-mono p-3">
                 <div className="flex mb-2">
-                    <img className="rounded-xl w-12 h-12" src={user?.photoURL || ""}/>
+                    <img className="rounded-xl w-12 h-12" src={user?.photoURL || ""} alt="userprofilepic"/>
                     <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
                 </div>
                 <div className="bg-cyan-900 p-3 rounded-xl text-xl">

@@ -18,7 +18,7 @@ const Navbar = () =>{
         <div className="w-full h-20  bg-cyan-800 flex justify-between">
             <Link to="/">
                 <div className="flex justify-center rounded-lg p-1 mt-1.5 mb-3 ml-3 bg-green-900">
-                    <img src="../../5346913.png" className="h-12 w-12 "/>
+                    <img src="../../5346913.png" className="h-12 w-12 " alt="mate society icon"/>
                     <p className="ml-3 p-3 text-3xl font-mono">Mate Society</p>
                 </div>
             </Link>
