@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
-import {addDoc, collection} from "firebase/firestore"
+import {addDoc, collection, serverTimestamp} from "firebase/firestore"
 import { db } from "../../config/firebase"
 import { auth } from "../../config/firebase"
 import {useAuthState} from "react-firebase-hooks/auth"
@@ -35,7 +35,8 @@ const CreateForm = () =>{
         await addDoc(postsRef, {
             ...data,
             username: user?.displayName,
-            userId: user?.uid
+            userId: user?.uid,
+            createdAt: serverTimestamp()
         })
         navigate("/")
     }

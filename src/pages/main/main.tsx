@@ -1,15 +1,19 @@
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs, collection, query, orderBy, serverTimestamp, FieldValue } from "firebase/firestore"
 import { auth, db } from "../../config/firebase"
 import { useEffect, useState } from "react"
 import Post from "./post"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { Link } from "react-router-dom"
+import { Timestamp } from "firebase/firestore"
+
+
 
 export interface Post {
     id: string,
     userId: string,
     username: string,
-    post: string
+    post: string,
+    createdAt: Timestamp
 }
 
 
@@ -23,8 +27,10 @@ const Main = () =>{
 
     const postsRef = collection(db, "posts")
 
+   const postsDoc = query(postsRef, orderBy("createdAt", "desc"))
+
     const getPosts = async () =>{
-        const data = await getDocs(postsRef)
+        const data = await getDocs(postsDoc)
         setPostsLists(data.docs.map((doc)=>({...doc.data(), id:doc.id})) as Post[])
     }
 

@@ -3,6 +3,7 @@ import { auth, db } from "../../config/firebase"
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { useEffect, useState } from "react"
+import moment from "moment"
 
 
 
@@ -17,6 +18,7 @@ interface Like {
 
 
 const Post = (props : Props) =>{
+    
     const [user] = useAuthState(auth)
     const {post} = props
     const [likes, setLikes] = useState<Like[] | null>(null)
@@ -63,6 +65,8 @@ const Post = (props : Props) =>{
 
     const hasUserLiked = likes?.find((like) => like.userId === user?.uid)
 
+   
+
     useEffect(()=>{
         getLikes()
     }, [])
@@ -75,7 +79,11 @@ const Post = (props : Props) =>{
                     <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
                 </div>
                 <div className="bg-cyan-900 p-3 rounded-xl text-xl">
-                    <p>{post.post}</p>
+                    <p className="flex max-w-[500px] break-words">{post.post}</p>
+                    <div className="flex mt-3 gap-2">
+                        <p className="text-xs">{post.createdAt.toDate().toDateString()}</p>
+                        <p className="text-xs">{post.createdAt.toDate().toLocaleTimeString()}</p>
+                    </div>
                 </div>
                 <div className="flex justify-between">
                     <button className="text-xl m-3 py-1 px-2 bg-amber-600 rounded-lg" onClick={hasUserLiked ? removeLike :addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</> }</button>
