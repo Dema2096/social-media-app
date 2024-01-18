@@ -79,7 +79,7 @@ const Post = (props : Props) =>{
                     <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
                 </div>
                 <div className="bg-cyan-900 p-3 rounded-xl text-xl">
-                    <p className="flex max-w-[500px] break-words">{post.post}</p>
+                    <p className="flex max-w-[500px] break-all">{post.post}</p>
                     <div className="flex mt-3 gap-2">
                         <p className="text-xs">{post.createdAt.toDate().toDateString()}</p>
                         <p className="text-xs">{post.createdAt.toDate().toLocaleTimeString()}</p>
