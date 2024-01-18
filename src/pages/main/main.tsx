@@ -13,7 +13,8 @@ export interface Post {
     userId: string,
     username: string,
     post: string,
-    createdAt: Timestamp
+    createdAt: Timestamp,
+    userPhoto: string
 }
 
 
@@ -37,6 +38,8 @@ const Main = () =>{
     useEffect(()=>{
         getPosts()
     }, [])
+
+    console.log(typeof user?.photoURL)
 
     return(
         <div>

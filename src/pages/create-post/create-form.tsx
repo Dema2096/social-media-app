@@ -36,7 +36,8 @@ const CreateForm = () =>{
             ...data,
             username: user?.displayName,
             userId: user?.uid,
-            createdAt: serverTimestamp()
+            createdAt: serverTimestamp(),
+            userPhoto: user?.photoURL
         })
         navigate("/")
     }
