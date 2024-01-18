@@ -78,8 +78,8 @@ const Post = (props : Props) =>{
                     <img className="rounded-xl w-12 h-12" src={post.userPhoto || ""} alt="userprofilepic"/>
                     <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
                 </div>
-                <div className="bg-cyan-900 p-3 rounded-xl text-xl">
-                    <p className="flex max-w-[500px] break-all">{post.post}</p>
+                <div className="bg-cyan-900 p-3 rounded-xl text-xl max-w-[490px]">
+                    <p className="text-center w-[450px] break-words text-wrap">{post.post}</p>
                     <div className="flex mt-3 gap-2">
                         <p className="text-xs">{post.createdAt.toDate().toDateString()}</p>
                         <p className="text-xs">{post.createdAt.toDate().toLocaleTimeString()}</p>
