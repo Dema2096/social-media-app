@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.db69ed71.css",
+    "main.js": "/static/js/main.470aa95b.js",
+    "static/media/abstract-digital-grid-black-background.jpg": "/static/media/abstract-digital-grid-black-background.0d6c387198112f922782.jpg",
+    "index.html": "/index.html",
+    "main.db69ed71.css.map": "/static/css/main.db69ed71.css.map",
+    "main.470aa95b.js.map": "/static/js/main.470aa95b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db69ed71.css",
+    "static/js/main.470aa95b.js"
+  ]
+}
