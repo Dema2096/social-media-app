@@ -13,7 +13,7 @@ module.exports = {
     },
     screens: {
       'xx': {"max": "1080px"},
-      'md': {'max': '1024px'},
+      'md': {'max': '900px'},
       // => @media (max-width: 767px) { ... }
 
       'sm': {'max': '425px'},

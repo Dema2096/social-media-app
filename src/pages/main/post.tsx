@@ -72,22 +72,22 @@ const Post = (props : Props) =>{
     }, [])
 
     return(
-        <div className="flex justify-center">
-            <div className="bg-cyan-800 rounded-xl m-5 w-[500px] max-h-[1000px] font-mono p-3">
+        <div className="flex justify-center ">
+            <div className="bg-cyan-800 rounded-xl m-5 w-[500px] max-h-[1000px] font-mono p-3 sm:h-58 sm:w-80 md:h-58 md:w-96">
                 <div className="flex mb-2">
                     <img className="rounded-xl w-12 h-12" src={post.userPhoto || ""} alt="userprofilepic"/>
-                    <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2">@{post.username}</p>
+                    <p className="text-lg bg-cyan-900 mt-0.5 mb-1 ml-1 p-2 sm:text-xs md:text-sm">@{post.username}</p>
                 </div>
-                <div className="bg-cyan-900 p-3 rounded-xl text-xl max-w-[490px]">
-                    <p className="text-center w-[450px] break-words text-wrap">{post.post}</p>
+                <div className="bg-cyan-900 p-3 rounded-xl text-xl max-w-[490px] sm:text-xs md:text-sm">
+                    <p className="text-center w-[450px] break-words text-wrap sm:w-[270px] md:w-[335px]">{post.post}</p>
                     <div className="flex mt-3 gap-2">
                         <p className="text-xs">{post.createdAt.toDate().toDateString()}</p>
                         <p className="text-xs">{post.createdAt.toDate().toLocaleTimeString()}</p>
                     </div>
                 </div>
                 <div className="flex justify-between">
-                    <button className="text-xl m-3 py-1 px-2 bg-amber-600 rounded-lg" onClick={hasUserLiked ? removeLike :addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</> }</button>
-                    {likes && <p className="text-lg m-3 p-2 bg-amber-600 rounded-lg">Likes: {likes?.length}</p>}
+                    <button className="text-xl m-3 py-1 px-2 bg-amber-600 rounded-lg sm:text-xs md:text-sm" onClick={hasUserLiked ? removeLike :addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</> }</button>
+                    {likes && <p className="text-lg m-3 p-2 bg-amber-600 rounded-lg sm:text-xs md:text-sm">Likes: {likes?.length}</p>}
                 </div>
             </div>
         </div>

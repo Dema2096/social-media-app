@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4614ea8b.css",
-    "main.js": "/static/js/main.ed87475e.js",
+    "main.css": "/static/css/main.0aad0d92.css",
+    "main.js": "/static/js/main.f5ace48e.js",
     "static/media/abstract-digital-grid-black-background.jpg": "/static/media/abstract-digital-grid-black-background.0d6c387198112f922782.jpg",
     "index.html": "/index.html",
-    "main.4614ea8b.css.map": "/static/css/main.4614ea8b.css.map",
-    "main.ed87475e.js.map": "/static/js/main.ed87475e.js.map"
+    "main.0aad0d92.css.map": "/static/css/main.0aad0d92.css.map",
+    "main.f5ace48e.js.map": "/static/js/main.f5ace48e.js.map"
   },
   "entrypoints": [
-    "static/css/main.4614ea8b.css",
-    "static/js/main.ed87475e.js"
+    "static/css/main.0aad0d92.css",
+    "static/js/main.f5ace48e.js"
   ]
 }
